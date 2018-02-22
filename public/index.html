@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- sensible defaults for styles -->
+  <link href="/dashboard.css" rel="stylesheet" />
+  
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <link rel="stylesheet" type="text/css" href="/tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script type="text/javascript" src="/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+  
+  <script src="/lodash.js"></script> 
+  
+  <script>
+    $(document).ready(function() {
+        $('.tooltip').tooltipster();
+    });
+  </script>
+  
+</head>
+<body>
+  
+  <header class='header'>
+    <span class='title'>Bluemix Performance Analysis</span>
+  </header>
+  
+  <div class="controls">
+    
+      <div class='div-container'>
+        <span class='title'>Index: </span>
+        <select id="select-index" name="select-index">
+        </select>
+      </div>
+    
+      <div class='div-container'>
+        <span class='title'>Query: </span>
+        <input type='text' id='input-query' class='query-input' value="spanID:530a7490-14f4-11e8-a213-dd402b7e2ed2"></input>
+      </div>
+      
+      <div class='button' id='render-action'>Render</div>
+      
+  </div>
+  
+  <div class="data" id='data'>
+
+  </div>
+
+  <hr></hr>
+
+  <script src="/dashboard.js"></script>
+
+</body>
+</html>
